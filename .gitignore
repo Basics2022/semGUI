@@ -12,5 +12,8 @@ data/
 *.log
 *.csv
 
+# Environment specific libraries
+.env/
+
 # OS specific
 .DS_Store
