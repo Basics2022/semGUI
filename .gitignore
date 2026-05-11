@@ -10,7 +10,7 @@ dist/
 # Project specific
 data/
 *.log
-*.csv
+# *.csv
 
 # Environment specific libraries
 .venv/
