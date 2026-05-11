@@ -13,7 +13,7 @@ data/
 *.csv
 
 # Environment specific libraries
-.env/
+.venv/
 
 # OS specific
 .DS_Store
