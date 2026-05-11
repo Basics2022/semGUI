@@ -18,13 +18,25 @@ class EntryWindow(tk.Toplevel):
         self.title("Experiment Setup")
         self.geometry(f"{ENTRY_WINDOW['WINDOW_WIDTH']}x{ENTRY_WINDOW['WINDOW_HEIGHT']}")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
-        
+      
+        try:
+            with open("default_experiment_setup.json", 'r') as f:
+                input_values = json.load(f)
+        except:
+            input_values = {
+                "participant_id": "",
+                "experimenter_name": "",
+                "notes": "",
+                "wordlist_path": "",
+                "recovery_path": ""
+            }
+
         # Input variables
-        self.participant_id = tk.StringVar()
-        self.experimenter_name = tk.StringVar()
-        self.notes = tk.StringVar()
-        self.wordlist_path = tk.StringVar(value="wordlist.csv")
-        self.recovery_path = tk.StringVar()
+        self.participant_id = tk.StringVar(value=input_values["participant_id"])
+        self.experimenter_name = tk.StringVar(value=input_values["experimenter_name"])
+        self.notes = tk.StringVar(value=input_values["notes"])
+        self.wordlist_path = tk.StringVar(value=input_values["wordlist_path"])
+        self.recovery_path = tk.StringVar(value=input_values["recovery_path"])
         
         # Flags for recovery mode and session data
         self.recovery_mode = False

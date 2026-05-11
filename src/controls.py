@@ -1,11 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
-from wordspace import WordSpace
-from draggable import DraggableWord
-from stackword import StackWord
 from trial_manager import TrialManager
 import random
+
+from draggable import DraggableWord
 from settings import GUI, VISUAL, EXPERIMENT, TEXT
+from stackword import StackWord
+from wordspace import WordSpace
 
 class MainWindow(tk.Tk):
     # Class-level constants for configuration

@@ -7,11 +7,12 @@ from entry_window import EntryWindow
 import logging
 
 
-logging.basicConfig(level=logging.INFO, 
-                   format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+def start_everything():
 
-if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, 
+                       format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logger = logging.getLogger(__name__)
+
     root = tk.Tk()
     root.withdraw()
     
@@ -23,3 +24,7 @@ if __name__ == "__main__":
         tk.messagebox.showerror("Error", f"Something went wrong:\n{e}")
     finally:
         root.destroy()
+
+if __name__ == "__main__":
+    start_everything()
+

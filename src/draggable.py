@@ -1,5 +1,6 @@
 import tkinter as tk
 from typing import TYPE_CHECKING, Optional
+
 from settings import DRAGGABLE_WORD, CANVAS_INTERACTION
 
 
